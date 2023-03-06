@@ -19,6 +19,27 @@ const MealItem({
 
   
   });
+String? get complexityText{
+  switch(complexity){
+    case Complexity.Simple: 
+    return "Simple";
+    case Complexity.Hard:
+    return "Hard";
+    break;
+    case Complexity.Challenging: return "Challenging"; break;
+  }
+}
+String? get affordabilityText{
+  switch(affordability){
+    case Affordability.Affordable: 
+    return "Affordability";
+    case Affordability.Luxurious:
+    return "Expensive";
+    break;
+    case Affordability.Pricey: return "Pricey"; break;
+  }
+  
+}
 
  void seletMeal(){}
 
@@ -38,8 +59,42 @@ const MealItem({
                 topRight: Radius.circular(15),
               ),
               child: Image.network(imageUrl, height:  250, width: double.infinity, fit: BoxFit.cover,),
-              )
-            ],)
+              ),
+              Positioned(
+                bottom: 20,
+                right: 10,
+                child: Container(
+                  width: 300,
+                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                  color: Colors.black54,
+                  child: Text(title, style: const TextStyle(fontSize: 26, color: Colors.white,),
+                  softWrap: true,
+                  overflow: TextOverflow.fade,),
+                ),
+              ),
+            ],
+            ),
+            Padding(padding: EdgeInsets.all(20),
+            child: Row( 
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+               children: [
+              Row(children:  [
+                const Icon(Icons.schedule),
+                const SizedBox(width: 15,),
+                Text('$duration min'),
+              ],),
+              Row(children:  [
+                const Icon(Icons.work),
+                const SizedBox(width: 15,),
+                Text(complexityText!),
+              ],),
+               Row(children:  [
+                const Icon(Icons.price_change),
+                const SizedBox(width: 15,),
+                Text(affordabilityText!),
+              ],)
+            ],),
+            )
           ],
         ),
       ),
