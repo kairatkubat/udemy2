@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:udemy2/categories_screen.dart';
-import 'package:udemy2/category_meal_screen.dart';
+import 'package:udemy2/screen/categories_screen.dart';
+import 'package:udemy2/screen/category_meal_screen.dart';
 
 void main() {
   runApp(const MyApp());
