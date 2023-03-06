@@ -8,51 +8,61 @@ const DUMMY_CATEGORIES = [
     id: 'c1',
     title: 'Italian',
     color: Colors.purple,
+    address: "toktogula"
   ),
   Category(
     id: 'c2',
     title: 'Quick & Easy',
     color: Colors.red,
+    address: "lew tolstoy"
   ),
   Category(
     id: 'c3',
     title: 'Hamburgers',
     color: Colors.orange,
+    address: "toktogula"
   ),
   Category(
     id: 'c4',
     title: 'German',
     color: Colors.amber,
+    address: "toktogula"
   ),
   Category(
     id: 'c5',
     title: 'Light & Lovely',
     color: Colors.blue,
+    address: "lew tolstoy"
   ),
   Category(
     id: 'c6',
     title: 'Exotic',
     color: Colors.green,
+    address: "lew tolstoy"
   ),
   Category(
     id: 'c7',
     title: 'Breakfast',
     color: Colors.lightBlue,
+    address: "toktogula"
   ),
   Category(
     id: 'c8',
     title: 'Asian',
     color: Colors.lightGreen,
+    address: "lew tolstoy"
   ),
   Category(
     id: 'c9',
     title: 'French',
     color: Colors.pink,
+    address: "toktogula"
   ),
   Category(
     id: 'c10',
     title: 'Summer',
     color: Colors.teal,
+    address: "lew tolstoy"
   ),
 ];
 

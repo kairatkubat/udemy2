@@ -5,7 +5,8 @@ class CategoryItem extends StatelessWidget {
   final String Id;
   final String title;
    final Color color;
-  const CategoryItem(this.color, this.title,  this.Id,);
+   final String address;
+  const CategoryItem(this.Id, this.title, this.color, this.address);
 
     selectCategory(BuildContext context){
      Navigator.of(context).pushNamed (
@@ -13,7 +14,8 @@ class CategoryItem extends StatelessWidget {
     //  (context) => CategoryScreenMeal(Id, title),)
   CategoryScreenMeal.routName, arguments: {
       'id': Id,
-      'title': title 
+      'title': title,
+      'address': address,
     }
      
      );
@@ -33,8 +35,11 @@ class CategoryItem extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(15),
         ),  
-        child: Text(title, textAlign: TextAlign.center,
+        child: Column(children: [
+           Text(title, textAlign: TextAlign.center,
         style: Theme.of(context).textTheme.titleMedium,),
+        Text(address)
+        ]),
         
       ),
     );

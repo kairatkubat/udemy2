@@ -1,7 +1,4 @@
 
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'dummy_data.dart';
 class CategoryScreenMeal extends StatelessWidget {
