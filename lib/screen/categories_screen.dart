@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy2/screen/tab_screen.dart';
 import '../dummy_data.dart';
 import '../widgets/CategoryItem.dart'; 
 
@@ -11,7 +12,7 @@ class  CatergoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const data = DUMMY_CATEGORIES;
     return Scaffold(
-      appBar: AppBar(title: const Text("DailyMeal")),
+      // appBar: AppBar(title: const Text("DailyMeal")),
       body : GridView(
         padding: const EdgeInsets.all(15),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -24,7 +25,9 @@ class  CatergoriesScreen extends StatelessWidget {
          CategoryItem(
           e.id, e.title, e.color, e.address
          )).toList()],
+         
        ),
+       
     );
   }
 }
