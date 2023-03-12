@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:udemy2/widgets/main_drawer.dart';
 
 import 'categories_screen.dart';
 import 'favorite_screen.dart';
@@ -26,8 +27,9 @@ class _TabScreenState extends State<TabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
-      title: Text(_pages[selectedPageIndex]['title'] as String),
+      title: Text(_pages[selectedPageIndex]['title'] as String, textAlign: TextAlign.center,),
      ),
+     drawer: MainDrawer(),
       body:  _pages[selectedPageIndex]['page'] as Widget,
       bottomNavigationBar:  BottomNavigationBar(
         unselectedItemColor: Colors.white,
