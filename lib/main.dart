@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy2/screen/categories_screen.dart';
 import 'package:udemy2/screen/category_meal_screen.dart';
+import 'package:udemy2/screen/filtered_screen.dart';
 import 'package:udemy2/screen/meal_detail_screen.dart';
 import 'package:udemy2/screen/tab_screen.dart';
 
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
         '/':(context) => TabScreen(),
        CatergoriesScreen.routeName:(context) => const CatergoriesScreen(),
         CategoryScreenMeal.routName :(context) => CategoryScreenMeal(),
-        MealDetailScreen.routName :(context) => MealDetailScreen(),
+        MealDetailScreen.routName :(context) => const MealDetailScreen(),
+        FilteredScreen.routName :(context) => FilteredScreen(),
       },
     );
   }

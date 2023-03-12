@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import '../screen/filtered_screen.dart';
 
 class MainDrawer extends StatelessWidget {
 
-  Widget buildListTile(String title, IconData icon){
+  Widget buildListTile(String title, IconData icon, Function tapHandler){
     return  ListTile(
           leading:   Icon(icon, size: 26), 
-          title:  Text(title, style: TextStyle( fontSize: 24, fontWeight: FontWeight.bold),
+          title:  Text(title, style: const TextStyle( fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          onLongPress: () {
-             
-          },
+          onTap: () => tapHandler(),
         );
   }
   const MainDrawer({super.key});
@@ -31,9 +30,15 @@ class MainDrawer extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-         buildListTile("Meal", Icons.restaurant),
-         buildListTile("Filter", Icons.settings),
-        buildListTile("Person", Icons.person),
+         buildListTile("Meal", Icons.restaurant, (){
+          Navigator.of(context).pushNamed('/');
+         }
+         ),
+         buildListTile("Filter", Icons.settings, (){
+          Navigator.of(context).pushNamed(FilteredScreen.routName);
+         }
+         ),
+       
       ]),
     ) ;
   }
