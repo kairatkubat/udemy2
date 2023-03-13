@@ -5,8 +5,7 @@ import 'categories_screen.dart';
 import 'favorite_screen.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({super.key});
-
+ static const routName = '/tabscreen';
   @override
   State<TabScreen> createState() => _TabScreenState();
 }
@@ -17,7 +16,7 @@ class _TabScreenState extends State<TabScreen> {
     {'page': CatergoriesScreen(), 'title': "Categories"},
       {'page': FavoriteScreen(), 'title': "Favorite "}
   ];
-  int selectedPageIndex = 1;
+  int selectedPageIndex = 0;
   void _selectPage(int index){
     setState(() {
       selectedPageIndex = index ;

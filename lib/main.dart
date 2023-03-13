@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
         CategoryScreenMeal.routName :(context) => CategoryScreenMeal(),
         MealDetailScreen.routName :(context) => const MealDetailScreen(),
         FilteredScreen.routName :(context) => FilteredScreen(),
+        TabScreen.routName :(context) => TabScreen()
       },
     );
   }

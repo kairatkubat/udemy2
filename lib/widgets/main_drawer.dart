@@ -8,7 +8,7 @@ class MainDrawer extends StatelessWidget {
           leading:   Icon(icon, size: 26), 
           title:  Text(title, style: const TextStyle( fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          onTap: () => tapHandler(),
+          onTap: () {tapHandler();} ,
         );
   }
   const MainDrawer({super.key});
@@ -31,11 +31,11 @@ class MainDrawer extends StatelessWidget {
         ),
         const SizedBox(height: 20),
          buildListTile("Meal", Icons.restaurant, (){
-          Navigator.of(context).pushNamed('/');
+          Navigator.of(context).pushReplacementNamed('/tabscreen');
          }
          ),
          buildListTile("Filter", Icons.settings, (){
-          Navigator.of(context).pushNamed(FilteredScreen.routName);
+          Navigator.of(context).pushReplacementNamed(FilteredScreen.routName);
          }
          ),
        
