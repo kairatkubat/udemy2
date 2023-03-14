@@ -9,7 +9,11 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     if(favoriteMeals.isEmpty){
       return Center(
-      child: Container(child: Text("gsalkdgs" ,)),
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child:  Text("No favorite meals, start adding favorite meals in meals page" , textAlign: TextAlign.center,
+      style: Theme.of(context).textTheme.titleMedium,
+      )),
       
     );
     }
