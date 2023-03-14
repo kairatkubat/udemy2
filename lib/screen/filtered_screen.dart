@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy2/model/SwitchTile.dart';
+import 'package:udemy2/screen/tab_screen.dart';
 import 'package:udemy2/widgets/main_drawer.dart';
 
 class FilteredScreen extends StatefulWidget {
@@ -41,9 +42,13 @@ class _FilteredScreenState extends State<FilteredScreen> {
      'gluten': _glutenFree,
      'lactose': _lactoseFree,
      'vegeterian': _vegetarian,
-     'vegan': _vegan 
+     'vegan': _vegan ,
+     
   }; 
-          widget.saveFilters(selectedFilters); }, icon: const Icon(Icons.save))],
+  
+   widget.saveFilters(selectedFilters);
+  
+           }, icon: const Icon(Icons.save))],
         title: const Text("Your filter")), 
       drawer: MainDrawer(),
       body: Column(

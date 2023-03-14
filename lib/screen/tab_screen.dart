@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:udemy2/widgets/main_drawer.dart';
 
+import '../model/meal.dart';
 import 'categories_screen.dart';
 import 'favorite_screen.dart';
 
 class TabScreen extends StatefulWidget {
  static const routName = '/tabscreen';
+ final  List<Meal> favoriteMeals;
+
+ TabScreen(this.favoriteMeals); 
   @override
   State<TabScreen> createState() => _TabScreenState();
 }
 
 class _TabScreenState extends State<TabScreen> {
-  final List <Map <String, Object >> _pages = const [
+  late List <Map <String, Object >> _pages;
+  int selectedPageIndex = 0;
+
+  @override
+  void initState() {
+    _pages =   [
    
     {'page': CatergoriesScreen(), 'title': "Categories"},
-      {'page': FavoriteScreen(), 'title': "Favorite "}
+      {'page': FavoriteScreen(widget.favoriteMeals), 'title': "Favorite "}
   ];
-  int selectedPageIndex = 0;
+    super.initState();
+
+  }
+
   void _selectPage(int index){
     setState(() {
       selectedPageIndex = index ;
