@@ -77,7 +77,7 @@ String? get affordabilityText{
                 right: 10,
                 child: Container(
                   width: 300,
-                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                   color: Colors.black54,
                   child: Text(title, style: const TextStyle(fontSize: 26, color: Colors.white,),
                   softWrap: true,

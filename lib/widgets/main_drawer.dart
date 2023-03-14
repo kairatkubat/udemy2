@@ -20,7 +20,7 @@ class MainDrawer extends StatelessWidget {
         Container(
           height: 150,
           width: double.infinity,
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           color: Theme.of(context).secondaryHeaderColor,
           alignment: Alignment.centerLeft,
           child: const Text("Cooking up", style: TextStyle(

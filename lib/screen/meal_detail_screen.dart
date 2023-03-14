@@ -35,7 +35,7 @@ class MealDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 300,
               width: double.infinity,
               child: Image.network(selectedMeal.imageUrl, fit: BoxFit.fitWidth,), 
@@ -82,9 +82,11 @@ class MealDetailScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
+      floatingActionButton: FloatingActionButton(
+        
+        onPressed: () {
         Navigator.of(context).pop(mealId);
-      }, child: Icon(Icons.radio_button_checked), ),
+      }, child: const Icon(Icons.delete_sweep), ),
     );
     
   }

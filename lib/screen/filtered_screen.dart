@@ -3,7 +3,11 @@ import 'package:udemy2/model/SwitchTile.dart';
 import 'package:udemy2/widgets/main_drawer.dart';
 
 class FilteredScreen extends StatefulWidget {
+   final Function(Map<String, bool>) saveFilters;
   static const routName = '/filters';
+  final Map<String, bool> currentFilters;
+
+ FilteredScreen(this.saveFilters, this.currentFilters );
 
   @override
   State<FilteredScreen> createState() => _FilteredScreenState();
@@ -15,13 +19,32 @@ class _FilteredScreenState extends State<FilteredScreen> {
   var _vegetarian = false;
   var _lactoseFree = false;
   var _vegan = false;
-   
+  
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _glutenFree = widget.currentFilters['gluten']!;
+    _vegetarian = widget.currentFilters['vegeterian']!;
+    _lactoseFree = widget.currentFilters['lactose']!;
+    _vegan = widget.currentFilters['vegan']!; 
+  }
+  
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Your filter")), 
+      appBar: AppBar(
+        actions: [IconButton(onPressed: () {
+          final selectedFilters = {
+     'gluten': _glutenFree,
+     'lactose': _lactoseFree,
+     'vegeterian': _vegetarian,
+     'vegan': _vegan 
+  }; 
+          widget.saveFilters(selectedFilters); }, icon: const Icon(Icons.save))],
+        title: const Text("Your filter")), 
       drawer: MainDrawer(),
       body: Column(
         children: [

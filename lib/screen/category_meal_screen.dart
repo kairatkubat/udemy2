@@ -2,10 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:udemy2/model/meal.dart';
 import 'package:udemy2/widgets/meal_item.dart';
-import '../dummy_data.dart';
 import '../model/meal.dart';
 class CategoryScreenMeal extends StatefulWidget {
   static const routName = '/category-mail'; 
+  final  List<Meal> availableMeals;
+
+  CategoryScreenMeal(this.availableMeals); 
 
   @override
   State<CategoryScreenMeal> createState() => _CategoryScreenMealState();
@@ -31,12 +33,13 @@ void _removeMeal(String mealId){
 }
 @override
   void didChangeDependencies() {
+    super.didChangeDependencies();
     if(!_ifChanged){
       final routArgs =  ModalRoute.of(context)?.settings.arguments as Map<String, String>;
     final categoryId = routArgs['id'];
      categoryTitle = routArgs['title'] as String;
     final categoryAddress = routArgs['address'];
-   displayedMeal  = DUMMY_MEALS.where((element){    
+   displayedMeal  = widget.availableMeals .where((element){    
     return element.categories.contains(categoryId);  
    
    }).toList();
