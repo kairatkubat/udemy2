@@ -40,7 +40,7 @@ class _TabScreenState extends State<TabScreen> {
      appBar: AppBar(
       title: Text(_pages[selectedPageIndex]['title'] as String, textAlign: TextAlign.center,),
      ),
-     drawer: MainDrawer(),
+     drawer: const MainDrawer(),
       body:  _pages[selectedPageIndex]['page'] as Widget,
       bottomNavigationBar:  BottomNavigationBar(
         unselectedItemColor: Colors.white,

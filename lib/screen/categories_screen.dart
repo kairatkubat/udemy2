@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:udemy2/screen/tab_screen.dart';
 import '../dummy_data.dart';
 import '../widgets/CategoryItem.dart'; 
 

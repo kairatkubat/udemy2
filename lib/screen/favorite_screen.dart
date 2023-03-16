@@ -10,7 +10,7 @@ class FavoriteScreen extends StatelessWidget {
     if(favoriteMeals.isEmpty){
       return Center(
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child:  Text("No favorite meals, start adding favorite meals in meals page" , textAlign: TextAlign.center,
       style: Theme.of(context).textTheme.titleMedium,
       )),

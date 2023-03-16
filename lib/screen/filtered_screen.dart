@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:udemy2/model/SwitchTile.dart';
-import 'package:udemy2/screen/tab_screen.dart';
 import 'package:udemy2/widgets/main_drawer.dart';
 
 class FilteredScreen extends StatefulWidget {

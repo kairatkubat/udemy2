@@ -40,7 +40,7 @@ void _togleFavorite(String mealId){
   _favoriteMeals.add(DUMMY_MEALS.firstWhere((element) => element.id == mealId));
  }
 }
-
+// filter function
   void  setFilters(Map<String, bool> filterData){
      setState(() {
        _filters = filterData; 
